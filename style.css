@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body,
+.time,
+.left-side,
+.right-side,
+.right-top,
+.right-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  min-height: 80vh;
+  background-color: rgb(58, 58, 61);
+  flex-direction: column;
+}
+
+.buttons {
+  margin-top: 40px;
+}
+
+.Digital-clock,
+.time,
+.right-side,
+.right-top,
+.right-down {
+  position: relative;
+}
+
+.Digital-clock {
+  color: white;
+  background: #2d2f38;
+  width: 420px;
+  padding: 20px 45px;
+  /* box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8); */
+  border-radius: 10px;
+}
+
+#hours {
+  font-weight: 600;
+  padding: 0 10px;
+  line-height: 125px;
+  font-size: 8em;
+  background: -webkit-linear-gradient(90deg, blue, white);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.right-side {
+  flex-direction: column;
+}
+
+#dots {
+  font-size: 4em;
+  transform: translateY(-3px);
+  color: gray;
+}
+
+#minutes {
+  font-size: 5em;
+  font-weight: 500;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  transform: translateY(10px);
+  background: -webkit-linear-gradient(90deg, rgb(184, 72, 90), white);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.right-down {
+  margin-left: 10px;
+  transform: translateY(-25px);
+}
+
+#period,
+#seconds {
+  font-size: 1.8em;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+#period {
+  color: orange;
+}
+
+#seconds {
+  color: white;
+}
+
+.Digital-clock::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(45deg, blue, orange, green);
+  background-size: 200% 200%;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  filter: blur(30px);
+  animation: glowing 5s easa infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.btn {
+  padding: 10px;
+  margin-left: 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  box-shadow: 0 0 30px rgb(184, 72, 90);
+}
+
+.startBtn {
+  background-color: green;
+  color: yellow;
+}
+
+.startBtn:hover {
+  background-color: yellow;
+  color: green;
+}
+
+.stopBtn {
+  background-color: yellow;
+  color: green;
+}
+
+.stopBtn:hover {
+  background-color: green;
+  color: yellow;
+}
